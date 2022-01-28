@@ -1,6 +1,7 @@
-FROM python:3.6
+FROM python:3.6-alpine
 
 EXPOSE 5000
+EXPOSE 3306
 
 WORKDIR /app
 
