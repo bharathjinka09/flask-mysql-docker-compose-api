@@ -1,5 +1,5 @@
 from typing import List, Dict
-from flask import Flask
+from flask import Flask,jsonify
 import mysql.connector
 import json
 
@@ -20,13 +20,14 @@ def favorite_colors() -> List[Dict]:
     results = [{name: color} for (name, color) in cursor]
     cursor.close()
     connection.close()
-
-    return results
+    print(jsonify(results), type(jsonify(results)))
+    return jsonify(results)
 
 
 @app.route('/')
-def index() -> str:
-    return json.dumps({'favorite_colors': favorite_colors()})
+def index():
+    print("hi")
+    return favorite_colors()
 
 
 if __name__ == '__main__':

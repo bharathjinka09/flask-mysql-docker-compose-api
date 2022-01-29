@@ -3,6 +3,16 @@ Code for a creating a docker app with Flask and MySQL tutorial
 Command to run docker flask mysql api:-
 
 ```
+Build and Run:-
+==============
+sudo docker-compose up --build
+
+Only build:-
+==========
+sudo docker-compose build
+
+Only run:-
+==========
 sudo docker-compose up
 ```
 
